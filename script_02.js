@@ -32,7 +32,7 @@ console.log(booksRentedAtLeastOnce());
 
 // Alternative :
 // const rentedAtLeastOnce = _ => {
-//   let result = books.filter(({ rentedCount }) => rentedCount > 0);
+//   let result = books.filter(({ rented }) => rented > 0);
 //   return result.length < books.length ? false : true;
 // };
 
@@ -63,8 +63,3 @@ function listOfBooksWithoutId(id){
   return books.filter(book => book['id'] != id);
 } 
 console.log(listOfBooksWithoutId(133712));
-
-const allBooksBorrowedOrNot = _ => {
-  return Boolean(books.find(book => book.rented < 1))
-};
-console.log(allBooksBorrowedOrNot());
