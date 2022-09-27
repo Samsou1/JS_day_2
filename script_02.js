@@ -19,8 +19,15 @@ function titlesOfBooks(){
 console.log(titlesOfBooks());
 
 function booksRentedOnce(){
-  return books.filter(book => book.rented != 0);
-};
+  return books.reduce(function(result, book){
+    if(book.rented == 0 || result == false){
+      result = false;
+    }else{
+      result = true;
+    }
+    return result;
+  });
+}
 console.log(booksRentedOnce());
 
 function booksMostRented(){
