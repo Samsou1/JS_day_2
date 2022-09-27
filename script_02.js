@@ -38,22 +38,22 @@ console.log(booksRentedAtLeastOnce());
 
 
 function booksMostRented(){
- return books.reduce(function(max, book){
-  if(book['rented'] > max['rented']){
-    return book;
+ return books.reduce(function(bookMostRead, currentBook){
+  if(currentBook['rented'] > bookMostRead['rented']){
+    return currentBook;
   }else{
-    return max;
+    return bookMostRead;
   }
   });
 }
 console.log(booksMostRented());
 
 function booksLeastRented(){
-  return books.reduce(function(max, book){
-   if(book['rented'] < max['rented']){
-     return book;
+  return books.reduce(function(bookMostRead, currentBook){
+   if(currentBook['rented'] < bookMostRead['rented']){
+     return currentBook;
    }else{
-     return max;
+     return bookMostRead;
    }
    });
  }
