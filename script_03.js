@@ -2,7 +2,7 @@ function averageGrossIncome(ary){
   return totalGrossIncome(ary) / ary.length;
 } 
 function totalGrossIncome(ary){
-  return ary.reduce((average, user) => user['revenue'] + average, 0);
+  return ary.reduce((sum, user) => user['revenue'] + sum, 0);
 }
 console.log(averageGrossIncome(users));
 // -------------------------------------->
